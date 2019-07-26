@@ -134,9 +134,12 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-const twoName= zooAnimals.forEach(function(obj) {
-  animalNames.push("Name: " + obj.animal_name + " , Scientific: " + obj.scientific_name);
-});
+// const twoNames= zooAnimals.forEach(function(obj) {
+//   animalNames.push("Name: " + obj.animal_name + " , Scientific: " + obj.scientific_name);
+// });
+
+const twoNames= zooAnimals.forEach(obj => animalNames.push("Name: " + obj.animal_name + " , Scientific: " + obj.scientific_name));
+
 
 console.log(animalNames);
 
@@ -146,9 +149,12 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = zooAnimals.map((obj) => {
-return obj.animal_name.toLowerCase();
-});
+// const lowerCase = zooAnimals.map(function(obj) {
+// return obj.animal_name.toLowerCase();
+// });
+
+const lowerCase= zooAnimals.map(obj => obj.animal_name.toLowerCase());
+
 console.log(lowerCase);
 
 /* Request 3: .filter()
@@ -156,9 +162,11 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = zooAnimals.filter(function(obj) {
-	return obj.population < 5;
-});
+// const lowerPopulation = zooAnimals.filter(function(obj) {
+// 	return obj.population < 5;
+// });
+
+const lowerPopulation = zooAnimals.filter(obj => obj.population < 5);
 
 console.log(lowerPopulation);
 
